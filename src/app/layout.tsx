@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Muebles Arte",
-  description: "Diseño de mobiliario con identidad artística",
+  description: "Diseno de mobiliario con identidad artistica",
 };
 
 export default function RootLayout({

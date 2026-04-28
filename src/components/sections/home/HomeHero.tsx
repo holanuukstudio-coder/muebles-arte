@@ -21,65 +21,70 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section className="w-full bg-white pt-[64px]">
-      <div className="mx-auto max-w-[1440px] px-4 py-6 md:px-8 md:py-8 lg:px-12 lg:py-10">
-        <div className="grid min-h-[calc(100vh-64px)] grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14">
-          <div className="order-2 lg:order-1">
-            <div className="relative flex h-[320px] w-full max-w-[620px] items-center justify-center overflow-hidden rounded-[24px] bg-[#f5f5f5] shadow-sm md:h-[420px] lg:h-[520px]">
-              {slides.map((slide, index) => (
-                <img
-                  key={slide}
-                  src={slide}
-                  alt={`Slide ${index + 1}`}
-                  className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-1000 ${
-                    index === currentSlide ? "opacity-100" : "opacity-0"
-                  }`}
-                />
-              ))}
+    <section className="relative min-h-screen overflow-hidden bg-[#f7f5f1] text-white">
+      {slides.map((slide, index) => (
+        <img
+          key={slide}
+          src={slide}
+          alt=""
+          aria-hidden="true"
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
 
-              <div className="absolute bottom-5 left-5 z-10 flex items-center gap-2">
-                {slides.map((slide, index) => (
-                  <button
-                    key={slide}
-                    type="button"
-                    aria-label={`Ir a la imagen ${index + 1}`}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`h-[2px] transition-all duration-300 ${
-                      index === currentSlide
-                        ? "w-10 bg-black"
-                        : "w-6 bg-black/40"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/8 to-black/48" />
+      <div className="absolute inset-0 bg-black/10" />
 
-          <div className="order-1 max-w-[560px] pt-4 lg:order-2 lg:ml-auto lg:pt-10">
-            <span className="text-[11px] uppercase tracking-[0.24em] text-black/50 md:text-xs">
-              Colección destacada
-            </span>
-
-            <h1 className="mt-4 text-4xl font-light uppercase leading-[0.95] tracking-[0.08em] text-black md:text-5xl xl:text-6xl">
-              <span className="block">Muebles con</span>
-              <span className="block">identidad artística</span>
-            </h1>
-
-            <p className="mt-6 max-w-[460px] text-sm leading-7 text-black/70 md:text-base">
-              Piezas diseñadas para transformar espacios con una estética limpia,
-              contemporánea y cuidadosamente curada.
+      <div className="relative z-10 flex min-h-screen items-end">
+        <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-5 pb-16 pt-28 md:px-8 md:pb-20 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.45fr)] lg:px-12">
+          <div className="max-w-[820px]">
+            <p className="text-xs uppercase tracking-[0.24em] text-white/72">
+              Mobiliario de autor
             </p>
 
-            <div className="mt-8">
+            <h1 className="mt-5 max-w-[760px] text-5xl font-light leading-[0.96] tracking-[0.02em] md:text-7xl lg:text-8xl">
+              Muebles minimalistas con alma de galeria.
+            </h1>
+          </div>
+
+          <div className="flex flex-col justify-end lg:items-end">
+            <p className="max-w-[360px] text-sm leading-7 text-white/78 md:text-base">
+              Piezas disenadas para espacios serenos, materiales honestos y una
+              presencia visual que se siente hecha a medida.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 href="/shop"
-                className="inline-flex items-center justify-center rounded-full border border-black bg-black px-7 py-3 text-xs font-medium uppercase tracking-[0.22em] text-white transition-all duration-300 hover:bg-white hover:text-black"
+                className="inline-flex h-11 items-center justify-center border border-white/55 px-6 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:border-white hover:bg-white hover:text-black"
               >
-                Shop Sale
+                Ver coleccion
+              </Link>
+              <Link
+                href="/showroom"
+                className="inline-flex h-11 items-center justify-center border border-white/55 px-6 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:border-white hover:bg-white hover:text-black"
+              >
+                Showroom
               </Link>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-7 left-5 z-20 flex items-center gap-2 md:left-8 lg:left-12">
+        {slides.map((slide, index) => (
+          <button
+            key={slide}
+            type="button"
+            aria-label={`Ir a la imagen ${index + 1}`}
+            onClick={() => setCurrentSlide(index)}
+            className={`h-px transition-all duration-300 ${
+              index === currentSlide ? "w-12 bg-white" : "w-6 bg-white/45"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
