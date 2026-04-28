@@ -20,9 +20,25 @@ const socialLinks = [
   { label: "Facebook", href: "https://facebook.com", icon: Facebook },
 ];
 
+const whatsappNumber = "529990000000";
+const whatsappHref = `https://wa.me/${whatsappNumber}`;
+
+function WhatsAppIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 32 32"
+      className="h-[18px] w-[18px]"
+      fill="currentColor"
+    >
+      <path d="M16.01 3.2A12.76 12.76 0 0 0 5.08 22.5L3.2 29.06l6.76-1.77A12.76 12.76 0 1 0 16.01 3.2Zm0 23.24a10.4 10.4 0 0 1-5.31-1.45l-.38-.22-4.01 1.05 1.07-3.88-.25-.4A10.4 10.4 0 1 1 16 26.44Zm5.72-7.78c-.31-.16-1.86-.92-2.15-1.02-.29-.11-.5-.16-.71.16-.21.31-.82 1.02-1 1.23-.18.21-.37.24-.68.08-.31-.16-1.32-.49-2.51-1.55-.93-.83-1.56-1.85-1.74-2.16-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.04 1.29 3.25c.16.21 2.22 3.39 5.38 4.75.75.32 1.34.52 1.79.66.75.24 1.44.21 1.98.13.6-.09 1.86-.76 2.12-1.5.26-.73.26-1.36.18-1.5-.08-.13-.29-.21-.61-.37Z" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#10100f] text-white">
+    <footer className="w-full bg-black text-white">
       <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-8 md:py-20 lg:px-12">
         <div className="grid gap-14 border-b border-white/12 pb-14 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
           <div>
@@ -43,7 +59,7 @@ export default function Footer() {
             <div className="mt-8">
               <Link
                 href="/contacto"
-                className="inline-flex h-11 items-center gap-2 border border-white bg-white px-6 text-xs font-medium uppercase tracking-[0.18em] text-black transition-colors hover:bg-transparent hover:text-white"
+                className="inline-flex h-11 items-center gap-2 border border-white bg-white px-6 text-xs font-medium uppercase tracking-[0.18em] !text-black transition-colors hover:bg-transparent hover:!text-white"
               >
                 Iniciar proyecto
                 <ArrowUpRight size={16} strokeWidth={1.5} />
@@ -111,6 +127,15 @@ export default function Footer() {
               Social
             </h3>
             <div className="mt-6 flex items-center gap-3">
+              <Link
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="flex h-10 w-10 items-center justify-center border border-white/18 text-white/72 transition-colors hover:border-white hover:bg-white hover:text-black"
+              >
+                <WhatsAppIcon />
+              </Link>
               {socialLinks.map(({ label, href, icon: Icon }) => (
                 <Link
                   key={label}
@@ -130,9 +155,14 @@ export default function Footer() {
         <div className="flex flex-col gap-5 pt-7 md:flex-row md:items-center md:justify-between">
           <Link
             href="/"
-            className="text-sm font-medium uppercase tracking-[0.2em] text-white"
+            className="inline-flex h-10 items-center"
+            aria-label="Mayte"
           >
-            Mayte
+            <img
+              src="/images/logo/mayte-logo-white.svg"
+              alt="Mayte"
+              className="h-7 w-auto"
+            />
           </Link>
           <p className="text-[11px] uppercase tracking-[0.18em] text-white/38">
             (c) {new Date().getFullYear()} Mayte. Todos los derechos reservados.

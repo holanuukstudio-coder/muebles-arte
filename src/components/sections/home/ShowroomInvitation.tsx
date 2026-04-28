@@ -42,7 +42,7 @@ export default function ShowroomInvitation() {
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
               href="/showroom"
-              className="inline-flex h-11 items-center justify-center border border-black bg-black px-6 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-white hover:text-black"
+              className="inline-flex h-11 items-center justify-center border border-black bg-black px-6 text-xs font-medium uppercase tracking-[0.18em] !text-white transition-colors hover:bg-white hover:!text-black"
             >
               Ver showroom
             </Link>

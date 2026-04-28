@@ -4,9 +4,14 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      className="text-sm font-medium uppercase tracking-[0.22em] text-black md:text-base"
+      className="inline-flex h-10 items-center"
+      aria-label="Mayte"
     >
-      Mayte
+      <img
+        src="/images/logo/nuuk2.svg"
+        alt="nuuk"
+        className="h-9 w-auto md:h-11"
+      />
     </Link>
   );
 }

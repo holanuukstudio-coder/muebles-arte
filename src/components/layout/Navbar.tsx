@@ -12,27 +12,21 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-white/72 text-black backdrop-blur-xl">
-        <div className="mx-auto grid h-14 w-full max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-5 md:h-16 md:px-8 lg:px-12">
-          <div className="flex items-center justify-start">
-            <button
-              type="button"
-              aria-label="Abrir menu"
-              aria-expanded={isMenuOpen}
-              onClick={() => setIsMenuOpen(true)}
-              className="flex h-10 w-10 items-center justify-center text-black/80 transition-colors hover:text-black lg:hidden"
-            >
-              <Menu size={22} strokeWidth={1.5} />
-            </button>
-          </div>
-
-          <div className="flex items-center justify-center">
-            <Logo />
-          </div>
-
+        <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-5 md:h-16 md:px-8 lg:px-12">
+          <Logo />
           <div className="hidden items-center justify-end gap-8 lg:flex">
             <NavLinks light={false} />
             <SocialActions dark />
           </div>
+          <button
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen(true)}
+            className="flex h-10 w-10 items-center justify-center text-black/80 transition-colors hover:text-black lg:hidden"
+          >
+            <Menu size={22} strokeWidth={1.5} />
+          </button>
         </div>
       </header>
 

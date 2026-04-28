@@ -58,13 +58,13 @@ export default function HomeHero() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 href="/shop"
-                className="inline-flex h-11 items-center justify-center border border-white/55 px-6 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:border-white hover:bg-white hover:text-black"
+                className="inline-flex h-11 items-center justify-center border border-white/55 px-6 text-xs font-medium uppercase tracking-[0.18em] !text-white transition-colors hover:border-white hover:bg-white hover:!text-black"
               >
                 Ver coleccion
               </Link>
               <Link
                 href="/showroom"
-                className="inline-flex h-11 items-center justify-center border border-white/55 px-6 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:border-white hover:bg-white hover:text-black"
+                className="inline-flex h-11 items-center justify-center border border-white/55 px-6 text-xs font-medium uppercase tracking-[0.18em] !text-white transition-colors hover:border-white hover:bg-white hover:!text-black"
               >
                 Showroom
               </Link>
