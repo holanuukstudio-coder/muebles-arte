@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+// Logo reutilizable para navbar y menu movil. El asset activo es Nuuk,
+// aunque quedan textos de marca pendientes de cierre en algunos lugares.
 export default function Logo() {
   return (
     <Link

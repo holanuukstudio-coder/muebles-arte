@@ -7,6 +7,8 @@ type ProductPageProps = {
   }>;
 };
 
+// Rutas estaticas del catalogo heredado. Mantener `params` como Promise por la
+// convencion actual de Next 16 en App Router.
 export function generateStaticParams() {
   return products.map((product) => ({
     slug: product.slug,

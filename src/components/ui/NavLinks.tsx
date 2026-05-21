@@ -7,6 +7,8 @@ type NavLinksProps = {
   light?: boolean;
 };
 
+// Renderiza la misma lista de enlaces en horizontal o vertical.
+// El prop light permite reutilizarlo sobre fondos claros u oscuros.
 export default function NavLinks({
   vertical = false,
   onNavigate,

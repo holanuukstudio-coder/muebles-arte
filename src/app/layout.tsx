@@ -5,6 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloatingButton from "@/components/ui/WhatsAppFloatingButton";
 
+// Root layout compartido por todas las rutas del App Router.
+// Mantiene la navegacion, footer y acceso flotante a WhatsApp fuera de cada pagina.
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,6 +22,7 @@ export const metadata: Metadata = {
   description: "Diseno de mobiliario con identidad artistica",
 };
 
+// En Next 16 el root layout debe conservar las etiquetas html/body.
 export default function RootLayout({
   children,
 }: Readonly<{

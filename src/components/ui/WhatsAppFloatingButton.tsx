@@ -1,6 +1,8 @@
 const whatsappNumber = "529990000000";
 const whatsappHref = `https://wa.me/${whatsappNumber}`;
 
+// Boton global de contacto rapido. El numero es placeholder hasta que el
+// cliente confirme el canal definitivo de WhatsApp.
 function WhatsAppIcon() {
   return (
     <svg
@@ -14,6 +16,7 @@ function WhatsAppIcon() {
   );
 }
 
+// Se monta desde app/layout.tsx para estar disponible en todas las paginas.
 export default function WhatsAppFloatingButton() {
   return (
     <a

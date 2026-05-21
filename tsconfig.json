@@ -1,4 +1,5 @@
 {
+  // Configuracion base de TypeScript para Next.js con App Router.
   "compilerOptions": {
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -20,6 +21,7 @@
       }
     ],
     "paths": {
+      // Alias usado en imports internos: "@/components/..." y "@/data/...".
       "@/*": ["./src/*"]
     }
   },

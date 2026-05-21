@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Tokens base del proyecto. La tipografia se inyecta desde app/layout.tsx. */
 :root {
   --background: #ffffff;
   --foreground: #111111;
@@ -26,4 +27,55 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Animaciones editoriales usadas en home y en la pagina Acerca de. */
+@keyframes hero-progress {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes about-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes about-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-progress {
+  animation: hero-progress 4500ms linear both;
+}
+
+.about-rise {
+  animation: about-rise 850ms ease both;
+}
+
+.about-float {
+  animation: about-float 5.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-progress,
+  .about-rise,
+  .about-float {
+    animation: none;
+  }
 }

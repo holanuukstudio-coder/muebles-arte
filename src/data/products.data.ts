@@ -9,6 +9,9 @@ export type Product = {
   dimensions: string;
 };
 
+// Catalogo heredado de la ruta /shop. Actualmente el showroom es la
+// experiencia principal; esta data se conserva para no romper las rutas
+// comerciales existentes y para una posible etapa de catalogo formal.
 export const products: Product[] = [
   {
     slug: "mesa-centro-nuuk",

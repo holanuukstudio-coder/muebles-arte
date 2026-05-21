@@ -1,3 +1,5 @@
+// Pagina inicial para alianzas y proyectos especiales. Actualmente es una
+// presentacion breve; puede crecer con casos de estudio o formulario dedicado.
 export default function ColaboracionesPage() {
   return (
     <main className="bg-white px-5 py-32 md:px-8 lg:px-12">

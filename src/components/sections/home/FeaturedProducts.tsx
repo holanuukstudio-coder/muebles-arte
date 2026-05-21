@@ -1,10 +1,30 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { products } from "@/data/products.data";
+import {
+  showroomCategories,
+  showroomProducts,
+} from "@/data/showroom.data";
+
+const featuredProducts = showroomProducts;
+
+// Estos helpers mantienen la home desacoplada del detalle del showroom:
+// si cambia el nombre de una categoria o la descripcion, se actualiza desde data.
+function getCategoryName(categorySlug: string) {
+  return (
+    showroomCategories.find((category) => category.slug === categorySlug)
+      ?.name ?? categorySlug
+  );
+}
+
+function getProductSummary(description: string) {
+  return `${description.split(".")[0]}.`;
+}
 
 export default function FeaturedProducts() {
+  // Carrusel horizontal nativo para conservar una interaccion ligera y facil de mantener.
   const scrollBy = (direction: "left" | "right") => {
     const track = document.getElementById("featured-products-track");
     track?.scrollBy({
@@ -50,36 +70,42 @@ export default function FeaturedProducts() {
           id="featured-products-track"
           className="mt-12 flex snap-x gap-5 overflow-x-auto pb-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {products.map((product) => (
-            <Link
-              key={product.slug}
-              href={`/shop/${product.slug}`}
-              className="group min-w-[78vw] snap-start md:min-w-[420px] lg:min-w-[460px]"
-            >
-              <article className="overflow-hidden border border-black/10 bg-[#f7f5f1]">
-                <div className="aspect-[4/5] overflow-hidden bg-[#efede8]">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                  />
-                </div>
-                <div className="flex min-h-[170px] flex-col justify-between p-5 md:p-6">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.22em] text-black/42">
-                      {product.category}
-                    </p>
-                    <h3 className="mt-3 text-2xl font-light tracking-[0.02em] text-black">
-                      {product.name}
-                    </h3>
+          {featuredProducts.map((product) => {
+            const image = product.variants[0].image;
+
+            return (
+              <Link
+                key={product.slug}
+                href={`/showroom/${product.categorySlug}`}
+                className="group min-w-[78vw] snap-start md:min-w-[420px] lg:min-w-[460px]"
+              >
+                <article className="overflow-hidden border border-black/10 bg-[#f7f5f1]">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-[#efede8]">
+                    <Image
+                      src={image}
+                      alt={product.name}
+                      fill
+                      sizes="(min-width: 1024px) 460px, (min-width: 768px) 420px, 78vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                    />
                   </div>
-                  <p className="mt-5 text-sm leading-6 text-black/62">
-                    {product.shortDescription}
-                  </p>
-                </div>
-              </article>
-            </Link>
-          ))}
+                  <div className="flex min-h-[178px] flex-col justify-between p-5 md:p-6">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.22em] text-black/42">
+                        {getCategoryName(product.categorySlug)}
+                      </p>
+                      <h3 className="mt-3 text-2xl font-light tracking-[0.02em] text-black">
+                        {product.name}
+                      </h3>
+                    </div>
+                    <p className="mt-5 text-sm leading-6 text-black/62">
+                      {getProductSummary(product.description)}
+                    </p>
+                  </div>
+                </article>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

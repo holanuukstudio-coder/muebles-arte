@@ -5,6 +5,8 @@ type SocialActionsProps = {
   dark?: boolean;
 };
 
+// Accesos sociales compactos usados dentro de la navegacion.
+// Reemplazar URLs placeholder cuando existan redes oficiales del cliente.
 export default function SocialActions({
   dark = false,
 }: SocialActionsProps) {

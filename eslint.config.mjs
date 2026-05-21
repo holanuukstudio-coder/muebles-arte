@@ -2,6 +2,8 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
+// Configuracion de lint para Next + TypeScript. Conserva las reglas oficiales
+// de Core Web Vitals y excluye artefactos generados del analisis.
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,

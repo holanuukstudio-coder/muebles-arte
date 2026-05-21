@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { products } from "@/data/products.data";
 
+// Catalogo comercial heredado. El menu principal prioriza showroom, pero esta
+// ruta se conserva para una futura experiencia de tienda o coleccion vendible.
 export default function ShopPage() {
   return (
     <main className="bg-white px-5 py-32 md:px-8 lg:px-12">

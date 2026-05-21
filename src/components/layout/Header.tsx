@@ -1,5 +1,7 @@
 import Navbar from "./Navbar";
 
+// Header heredado de una version anterior del sitio. La home actual usa HomeHero,
+// pero se conserva por si se necesita una cabecera full-screen en otra ruta.
 export default function Header() {
   return (
     <header

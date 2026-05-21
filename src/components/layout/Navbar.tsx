@@ -6,6 +6,8 @@ import Logo from "@/components/ui/Logo";
 import NavLinks from "@/components/ui/NavLinks";
 import SocialActions from "@/components/ui/SocialActions";
 
+// Navegacion principal fija. El estado local solo controla el panel movil;
+// los enlaces se centralizan en data/site/navigation.data.ts.
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -39,6 +41,7 @@ export default function Navbar() {
         onClick={() => setIsMenuOpen(false)}
       />
 
+      {/* Panel lateral usado exclusivamente en mobile/tablet. */}
       <aside
         className={`fixed left-0 top-0 z-[70] h-screen w-[85%] max-w-[360px] bg-white px-6 py-6 shadow-xl transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"

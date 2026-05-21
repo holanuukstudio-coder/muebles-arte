@@ -4,6 +4,8 @@ const notes = [
   "Texturas discretas para muros con caracter.",
 ];
 
+// Vista previa de contenido editorial. Por ahora es estatico; si se agrega
+// blog o CMS, este arreglo debe reemplazarse por la fuente de publicaciones.
 export default function JournalPreview() {
   return (
     <section className="bg-white px-5 pb-24 md:px-8 lg:px-12">

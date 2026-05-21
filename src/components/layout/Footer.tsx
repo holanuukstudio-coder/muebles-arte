@@ -2,9 +2,9 @@ import Link from "next/link";
 import { ArrowUpRight, Instagram, Facebook } from "lucide-react";
 
 const footerLinks = [
-  { label: "Shop", href: "/shop" },
-  { label: "Acerca de", href: "/acerca-de" },
   { label: "Showroom", href: "/showroom" },
+  { label: "Acerca de", href: "/acerca-de" },
+  { label: "Colaboraciones", href: "/colaboraciones" },
   { label: "Contacto", href: "/contacto" },
 ];
 
@@ -23,6 +23,7 @@ const socialLinks = [
 const whatsappNumber = "529990000000";
 const whatsappHref = `https://wa.me/${whatsappNumber}`;
 
+// Icono local para WhatsApp porque lucide-react no incluye el isotipo oficial.
 function WhatsAppIcon() {
   return (
     <svg
@@ -36,6 +37,8 @@ function WhatsAppIcon() {
   );
 }
 
+// Footer editorial con navegacion secundaria, servicios y datos de contacto.
+// Varios textos siguen siendo configurables cuando el cliente entregue datos finales.
 export default function Footer() {
   return (
     <footer className="w-full bg-black text-white">

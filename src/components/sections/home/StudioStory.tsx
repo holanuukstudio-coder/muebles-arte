@@ -13,6 +13,8 @@ const values = [
   },
 ];
 
+// Resumen de posicionamiento del estudio para la home. Mantenerlo breve:
+// la pagina Acerca de contiene la narrativa completa de Nuuk y Mayte.
 export default function StudioStory() {
   return (
     <section className="bg-[#f7f5f1] px-5 py-24 md:px-8 lg:px-12">

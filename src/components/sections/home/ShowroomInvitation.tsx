@@ -6,6 +6,8 @@ const studioStats = [
   { value: "18", label: "piezas curadas" },
 ];
 
+// Bloque editorial de cierre en home. Las metricas son contenido de marketing
+// y deben actualizarse aqui cuando cambie la presencia real del estudio.
 export default function ShowroomInvitation() {
   return (
     <section className="bg-white px-5 py-24 md:px-8 lg:px-12">
