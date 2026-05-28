@@ -40,7 +40,7 @@ const manifestoWords = [
 // interactivos ligeros definidos en CSS global y en MaytePortrait.
 export default function AcercaDePage() {
   return (
-    <main className="bg-white">
+    <main className="bg-paper">
       <section className="px-5 pb-20 pt-32 md:px-8 lg:px-12">
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div className="about-rise">
@@ -83,7 +83,7 @@ export default function AcercaDePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-[#f7f5f1] px-5 py-20 md:px-8 lg:px-12">
+      <section className="overflow-hidden bg-sand px-5 py-20 md:px-8 lg:px-12">
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-black/45">
@@ -159,7 +159,7 @@ export default function AcercaDePage() {
         </div>
       </section>
 
-      <section className="bg-black px-5 py-20 text-white md:px-8 lg:px-12">
+      <section className="bg-ink px-5 py-20 text-white md:px-8 lg:px-12">
         <div className="mx-auto grid max-w-[1440px] gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-white/42">

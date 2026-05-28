@@ -34,7 +34,7 @@ export default function FeaturedProducts() {
   };
 
   return (
-    <section className="bg-white px-5 py-24 md:px-8 lg:px-12">
+    <section className="bg-paper px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto max-w-[1440px]">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[680px]">
@@ -79,8 +79,8 @@ export default function FeaturedProducts() {
                 href={`/showroom/${product.categorySlug}`}
                 className="group min-w-[78vw] snap-start md:min-w-[420px] lg:min-w-[460px]"
               >
-                <article className="overflow-hidden border border-black/10 bg-[#f7f5f1]">
-                  <div className="relative aspect-[4/5] overflow-hidden bg-[#efede8]">
+                <article className="overflow-hidden border border-black/10 bg-sand">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-sand-deep">
                     <Image
                       src={image}
                       alt={product.name}

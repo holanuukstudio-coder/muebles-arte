@@ -7,7 +7,7 @@ export default function Header() {
     <header
       className="relative h-screen w-full overflow-hidden bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/header/header1.png')",
+        backgroundImage: "url('/images/header/YAYAYAY.jpg')",
       }}
     >
       <div className="absolute inset-0 bg-black/30" />

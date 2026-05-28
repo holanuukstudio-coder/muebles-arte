@@ -17,7 +17,7 @@ const values = [
 // la pagina Acerca de contiene la narrativa completa de Nuuk y Mayte.
 export default function StudioStory() {
   return (
-    <section className="bg-[#f7f5f1] px-5 py-24 md:px-8 lg:px-12">
+    <section className="bg-sand px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto grid max-w-[1440px] gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
         <div>
           <p className="text-xs uppercase tracking-[0.24em] text-black/45">

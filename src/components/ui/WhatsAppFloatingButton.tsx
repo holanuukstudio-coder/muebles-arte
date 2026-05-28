@@ -24,7 +24,7 @@ export default function WhatsAppFloatingButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className="group fixed bottom-3 right-5 z-[80] inline-flex h-13 items-center gap-3 rounded-full border border-black/10 bg-white/92 px-4 text-black shadow-[0_18px_50px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-black hover:bg-black hover:text-white md:bottom-5 md:right-7 md:px-5"
+      className="group fixed bottom-3 right-5 z-[80] inline-flex h-13 items-center gap-3 rounded-full border border-black/10 bg-paper/92 px-4 text-black shadow-[0_18px_50px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-black hover:bg-black hover:text-white md:bottom-5 md:right-7 md:px-5"
     >
       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors duration-300 group-hover:bg-white group-hover:text-black">
         <WhatsAppIcon />

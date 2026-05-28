@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-white/72 text-black backdrop-blur-xl">
+      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-paper/72 text-black backdrop-blur-xl">
         <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-5 md:h-16 md:px-8 lg:px-12">
           <Logo />
           <div className="hidden items-center justify-end gap-8 lg:flex">
@@ -43,7 +43,7 @@ export default function Navbar() {
 
       {/* Panel lateral usado exclusivamente en mobile/tablet. */}
       <aside
-        className={`fixed left-0 top-0 z-[70] h-screen w-[85%] max-w-[360px] bg-white px-6 py-6 shadow-xl transition-transform duration-300 ${
+        className={`fixed left-0 top-0 z-[70] h-screen w-[85%] max-w-[360px] bg-paper px-6 py-6 shadow-xl transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

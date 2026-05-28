@@ -24,8 +24,8 @@ export default function ProductVariantCard({
   )}`;
 
   return (
-    <article className="grid overflow-hidden border border-black/10 bg-white lg:grid-cols-[1.05fr_0.95fr]">
-      <div className="relative min-h-[360px] bg-[#f7f5f1] md:min-h-[520px]">
+    <article className="grid overflow-hidden border border-black/10 bg-paper lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="relative min-h-[360px] bg-sand md:min-h-[520px]">
         <Image
           key={selectedVariant.image}
           src={selectedVariant.image}

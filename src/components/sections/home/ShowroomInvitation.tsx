@@ -10,7 +10,7 @@ const studioStats = [
 // y deben actualizarse aqui cuando cambie la presencia real del estudio.
 export default function ShowroomInvitation() {
   return (
-    <section className="bg-white px-5 py-24 md:px-8 lg:px-12">
+    <section className="bg-paper px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div className="order-2 lg:order-1">
           <p className="text-xs uppercase tracking-[0.24em] text-black/45">
@@ -58,23 +58,23 @@ export default function ShowroomInvitation() {
         </div>
 
         <div className="order-1 grid gap-4 lg:order-2">
-          <div className="aspect-[5/4] overflow-hidden bg-[#f7f5f1]">
+          <div className="aspect-[5/4] overflow-hidden bg-sand">
             <img
-              src="/images/header/nuukestudioheader1.jpg"
+              src="/images/header/YAYAYAY.jpg"
               alt="Showroom de mobiliario minimalista"
               className="h-full w-full object-cover"
             />
           </div>
 
           <div className="grid grid-cols-[1fr_0.65fr] gap-4">
-            <div className="aspect-[4/3] overflow-hidden bg-[#f7f5f1]">
+            <div className="aspect-[4/3] overflow-hidden bg-sand">
               <img
                 src="/images/header/nuukestudio2.png"
                 alt="Detalle de mobiliario y objetos de interior"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="flex items-end bg-[#f7f5f1] p-5">
+            <div className="flex items-end bg-sand p-5">
               <p className="text-sm leading-6 text-black/58">
                 Selecciones visuales para proyectos residenciales, estudios e
                 interiorismo.

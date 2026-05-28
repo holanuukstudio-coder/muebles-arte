@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Manrope } from "next/font/google";
 import "../styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -7,8 +7,8 @@ import WhatsAppFloatingButton from "@/components/ui/WhatsAppFloatingButton";
 
 // Root layout compartido por todas las rutas del App Router.
 // Mantiene la navegacion, footer y acceso flotante a WhatsApp fuera de cada pagina.
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manropeSans = Manrope({
+  variable: "--font-manrope-sans",
   subsets: ["latin"],
 });
 
@@ -31,9 +31,9 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${manropeSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white text-black">
+      <body className="min-h-full bg-paper text-ink">
         <Navbar />
         {children}
         <Footer />

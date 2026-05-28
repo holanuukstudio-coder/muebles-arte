@@ -56,7 +56,7 @@ const projectTypes = [
 // El formulario es visual y queda listo para integrarse a un servicio real.
 export default function ContactoPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-paper">
       <section className="px-5 pb-16 pt-32 md:px-8 lg:px-12">
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[0.95fr_0.7fr] lg:items-end">
           <div>
@@ -83,7 +83,7 @@ export default function ContactoPage() {
               href={href}
               target={href.startsWith("https://") ? "_blank" : undefined}
               rel={href.startsWith("https://") ? "noopener noreferrer" : undefined}
-              className="group flex min-h-[260px] flex-col justify-between border border-black/10 bg-[#f7f5f1] p-6 transition-colors duration-300 hover:border-black hover:bg-black hover:text-white md:p-7"
+              className="group flex min-h-[260px] flex-col justify-between border border-black/10 bg-sand p-6 transition-colors duration-300 hover:border-black hover:bg-black hover:text-white md:p-7"
             >
               <div>
                 <Icon
@@ -107,7 +107,7 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <section className="bg-[#f7f5f1] px-5 py-20 md:px-8 lg:px-12">
+      <section className="bg-sand px-5 py-20 md:px-8 lg:px-12">
         <div className="mx-auto grid max-w-[1440px] gap-14 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-black/45">
@@ -164,7 +164,7 @@ export default function ContactoPage() {
             </div>
           </div>
 
-          <form className="grid gap-5 bg-white p-5 md:p-7">
+          <form className="grid gap-5 bg-paper p-5 md:p-7">
             <div className="grid gap-5 md:grid-cols-2">
               <label className="grid gap-2">
                 <span className="text-xs uppercase tracking-[0.2em] text-black/42">
@@ -173,7 +173,7 @@ export default function ContactoPage() {
                 <input
                   type="text"
                   name="name"
-                  className="h-12 border border-black/12 bg-white px-4 text-sm outline-none transition-colors focus:border-black"
+                  className="h-12 border border-black/12 bg-paper px-4 text-sm outline-none transition-colors focus:border-black"
                 />
               </label>
               <label className="grid gap-2">
@@ -183,7 +183,7 @@ export default function ContactoPage() {
                 <input
                   type="email"
                   name="email"
-                  className="h-12 border border-black/12 bg-white px-4 text-sm outline-none transition-colors focus:border-black"
+                  className="h-12 border border-black/12 bg-paper px-4 text-sm outline-none transition-colors focus:border-black"
                 />
               </label>
             </div>
@@ -194,7 +194,7 @@ export default function ContactoPage() {
               </span>
               <select
                 name="projectType"
-                className="h-12 border border-black/12 bg-white px-4 text-sm text-black/70 outline-none transition-colors focus:border-black"
+                className="h-12 border border-black/12 bg-paper px-4 text-sm text-black/70 outline-none transition-colors focus:border-black"
                 defaultValue=""
               >
                 <option value="" disabled>
@@ -215,7 +215,7 @@ export default function ContactoPage() {
               <textarea
                 name="message"
                 rows={7}
-                className="resize-none border border-black/12 bg-white p-4 text-sm leading-7 outline-none transition-colors focus:border-black"
+                className="resize-none border border-black/12 bg-paper p-4 text-sm leading-7 outline-none transition-colors focus:border-black"
               />
             </label>
 

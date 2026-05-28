@@ -8,7 +8,7 @@ const notes = [
 // blog o CMS, este arreglo debe reemplazarse por la fuente de publicaciones.
 export default function JournalPreview() {
   return (
-    <section className="bg-white px-5 pb-24 md:px-8 lg:px-12">
+    <section className="bg-paper px-5 pb-24 md:px-8 lg:px-12">
       <div className="mx-auto max-w-[1440px] border-t border-black/12 pt-12">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>

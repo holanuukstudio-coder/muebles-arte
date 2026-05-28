@@ -4,8 +4,19 @@
 :root {
   --background: #ffffff;
   --foreground: #111111;
-  --font-sans: var(--font-geist-sans);
+  --paper: #ffffff;
+  --sand: #f7f5f1;
+  --sand-deep: #efede8;
+  --ink: #111111;
+  --font-sans: var(--font-manrope-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-sand: var(--sand);
+  --color-sand-deep: var(--sand-deep);
+  --color-ink: var(--ink);
 }
 
 html,

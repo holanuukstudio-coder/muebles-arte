@@ -24,9 +24,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <main className="bg-white px-5 py-28 md:px-8 lg:px-12">
+    <main className="bg-paper px-5 py-28 md:px-8 lg:px-12">
       <section className="mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-        <div className="overflow-hidden bg-[#f7f5f1]">
+        <div className="overflow-hidden bg-sand">
           <img
             src={product.image}
             alt={product.name}

@@ -8,7 +8,7 @@ import JournalPreview from "@/components/sections/home/JournalPreview";
 // para facilitar ajustes de narrativa sin tocar la estructura global.
 export default function HomePage() {
   return (
-    <main className="bg-white">
+    <main className="bg-paper">
       <HomeHero />
       <FeaturedProducts />
       <StudioStory />

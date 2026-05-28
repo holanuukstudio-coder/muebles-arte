@@ -41,7 +41,7 @@ function WhatsAppIcon() {
 // Varios textos siguen siendo configurables cuando el cliente entregue datos finales.
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-white">
+    <footer className="w-full bg-ink text-white">
       <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-8 md:py-20 lg:px-12">
         <div className="grid gap-14 border-b border-white/12 pb-14 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
           <div>

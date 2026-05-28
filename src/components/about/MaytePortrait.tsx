@@ -28,7 +28,7 @@ export default function MaytePortrait() {
     >
       <div className="absolute -inset-3 border border-black/8 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2" />
       <div
-        className="relative aspect-[4/5] overflow-hidden bg-[#f7f5f1] transition-transform duration-300 ease-out"
+        className="relative aspect-[4/5] overflow-hidden bg-sand transition-transform duration-300 ease-out"
         style={{
           transform: `perspective(900px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)`,
         }}
@@ -55,7 +55,7 @@ export default function MaytePortrait() {
       {floatingNotes.map((note, index) => (
         <span
           key={note.label}
-          className={`pointer-events-none absolute border border-black/12 bg-white/86 px-3 py-2 text-[11px] uppercase tracking-[0.18em] text-black/58 shadow-[0_18px_45px_rgba(0,0,0,0.08)] backdrop-blur-md transition-transform duration-500 group-hover:-translate-y-1 ${note.className}`}
+          className={`pointer-events-none absolute border border-black/12 bg-paper/86 px-3 py-2 text-[11px] uppercase tracking-[0.18em] text-black/58 shadow-[0_18px_45px_rgba(0,0,0,0.08)] backdrop-blur-md transition-transform duration-500 group-hover:-translate-y-1 ${note.className}`}
           style={{ animationDelay: `${index * 220}ms` }}
         >
           {note.label}

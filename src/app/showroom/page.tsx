@@ -7,7 +7,7 @@ import { showroomCategories } from "@/data/showroom.data";
 // de producto; el cambio de variantes vive en cada categoria dinamica.
 export default function ShowroomPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-paper">
       <section className="px-5 pb-12 pt-32 md:px-8 md:pb-16 lg:px-12">
         <div className="mx-auto max-w-[1440px]">
           <p className="text-xs uppercase tracking-[0.24em] text-black/45">
@@ -31,7 +31,7 @@ export default function ShowroomPage() {
             <Link
               key={category.slug}
               href={`/showroom/${category.slug}`}
-              className={`group relative min-h-[420px] overflow-hidden bg-[#f7f5f1] text-white md:min-h-[560px] ${
+              className={`group relative min-h-[420px] overflow-hidden bg-sand text-white md:min-h-[560px] ${
                 index === 0 ? "md:row-span-2 md:min-h-[720px]" : ""
               }`}
             >
@@ -47,17 +47,17 @@ export default function ShowroomPage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 priority={index === 0}
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/62" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/18 via-black/18 to-black/76" />
               <div className="absolute inset-x-0 bottom-0 z-10 p-6 md:p-8">
                 <div className="flex items-end justify-between gap-8">
                   <div>
                     <p className="text-xs uppercase tracking-[0.22em] text-white/68">
                       Coleccion
                     </p>
-                    <h2 className="mt-3 text-4xl font-light tracking-[0.02em] md:text-5xl">
+                    <h2 className="mt-3 text-4xl font-light tracking-[0.02em] !text-white md:text-5xl">
                       {category.name}
                     </h2>
-                    <p className="mt-4 max-w-[420px] text-sm leading-6 text-white/72">
+                    <p className="mt-4 max-w-[420px] text-sm leading-6 !text-white/78">
                       {category.description}
                     </p>
                   </div>

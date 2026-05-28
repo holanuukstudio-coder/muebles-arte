@@ -6,26 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 const slides = [
-  {
-    src: "/images/header/nuukheader1.png",
-    position: "center",
-    eyebrow: "Mobiliario de autor",
-    title: "Muebles minimalistas con alma de galeria.",
-    description:
-      "Piezas disenadas para espacios serenos, materiales honestos y una presencia visual que se siente hecha a medida.",
-    href: "/showroom",
-    cta: "Explorar showroom",
-  },
-  {
-    src: "/images/header/header1.png",
-    position: "center",
-    eyebrow: "Nuuk Estudio",
-    title: "Arte, diseno y funcion desde Merida.",
-    description:
-      "Un estudio donde el mobiliario, el interiorismo y la produccion artistica se encuentran en piezas con identidad propia.",
-    href: "/acerca-de",
-    cta: "Conocer el estudio",
-  },
+
   {
     src: "/images/Muebles Nuuk/Muebles Nuuk/Mesa - Ciclos/mesa cambio de color.jpg",
     position: "center",
@@ -47,16 +28,6 @@ const slides = [
     cta: "Ver sillas",
   },
   {
-    src: "/images/Sillas Nuuk/Sillas Nuuk/Silla - Pilares de la infancia/IMG_3866.jpeg",
-    position: "center 56%",
-    eyebrow: "Pilares de la infancia",
-    title: "Color y memoria en una pieza utilitaria.",
-    description:
-      "Cada acabado permite que la silla cambie de caracter sin perder su lenguaje jugueton y contemporaneo.",
-    href: "/showroom/sillas",
-    cta: "Cambiar acabados",
-  },
-  {
     src: "/images/Azulejos/Azulejos/NEEWWWW.png",
     position: "center",
     eyebrow: "Azulejos artisticos",
@@ -76,16 +47,6 @@ const slides = [
     href: "/showroom",
     cta: "Recorrer coleccion",
   },
-  {
-    src: "/images/header/nuukestudio3.png",
-    position: "center",
-    eyebrow: "Proyecto especial",
-    title: "Cada espacio puede pedir una pieza distinta.",
-    description:
-      "Trabajamos mobiliario, arte y objetos a medida para residencias, estudios, marcas y proyectos de interior.",
-    href: "/contacto",
-    cta: "Iniciar proyecto",
-  },
 ];
 
 // Hero principal de la home. El arreglo `slides` controla la secuencia visual,
@@ -104,7 +65,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#f7f5f1] text-white">
+    <section className="relative min-h-screen overflow-hidden bg-sand text-white">
       {slides.map((slide, index) => (
         <Image
           key={slide.src}

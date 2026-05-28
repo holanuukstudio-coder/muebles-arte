@@ -50,7 +50,7 @@ export const products: Product[] = [
     slug: "mesa-comedor-bruma",
     name: "Mesa Comedor Bruma",
     category: "Mesas",
-    image: "/images/header/nuukestudioheader1.jpg",
+    image: "/images/header/YAYAYAY.jpg",
     shortDescription: "Mesa de comedor sobria para reuniones largas.",
     description:
       "Una mesa amplia y silenciosa, con bordes suaves y una lectura contemporanea. Pensada para integrarse a casas, estudios y proyectos de interiorismo.",
@@ -61,7 +61,7 @@ export const products: Product[] = [
     slug: "consola-piedra",
     name: "Consola Piedra",
     category: "Consolas",
-    image: "/images/header/header1.png",
+    image: "/images/header/nuukestudio3.png",
     shortDescription: "Una pieza de entrada con caracter arquitectonico.",
     description:
       "Consola de apoyo para recibidores, pasillos o salas. Su geometria contenida ayuda a ordenar objetos, arte y luz en una sola escena.",

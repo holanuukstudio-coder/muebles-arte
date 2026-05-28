@@ -5,7 +5,7 @@ import { products } from "@/data/products.data";
 // ruta se conserva para una futura experiencia de tienda o coleccion vendible.
 export default function ShopPage() {
   return (
-    <main className="bg-white px-5 py-32 md:px-8 lg:px-12">
+    <main className="bg-paper px-5 py-32 md:px-8 lg:px-12">
       <section className="mx-auto max-w-[1440px]">
         <p className="text-xs uppercase tracking-[0.24em] text-black/45">
           Shop
@@ -23,7 +23,7 @@ export default function ShopPage() {
             <Link
               key={product.slug}
               href={`/shop/${product.slug}`}
-              className="group block border border-black/10 bg-[#f7f5f1]"
+              className="group block border border-black/10 bg-sand"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img
