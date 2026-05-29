@@ -4,6 +4,7 @@ import {
   listContactRequests,
   validateContactRequestInput,
 } from "@/lib/contact-requests.store";
+import { sendContactRequestEmail } from "@/lib/contact-email";
 
 export const runtime = "nodejs";
 
@@ -27,5 +28,11 @@ export async function POST(request: Request) {
   }
 
   const contactRequest = await createContactRequest(result.data);
-  return Response.json({ data: contactRequest }, { status: 201 });
+  const email = await sendContactRequestEmail(contactRequest);
+
+  if (email.status === "failed") {
+    console.error("No se pudo enviar el correo de contacto:", email.reason);
+  }
+
+  return Response.json({ data: contactRequest, email }, { status: 201 });
 }

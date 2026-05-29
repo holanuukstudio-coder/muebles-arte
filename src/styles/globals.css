@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "../../node_modules/tailwindcss/index.css";
 
 /* Tokens base del proyecto. La tipografia se inyecta desde app/layout.tsx. */
 :root {
