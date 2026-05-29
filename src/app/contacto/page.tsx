@@ -8,6 +8,7 @@ import {
   MessageCircle,
   PencilLine,
 } from "lucide-react";
+import ContactForm from "@/components/contact/ContactForm";
 
 const whatsappNumber = "529990000000";
 const email = "hola@nuukestudio.com";
@@ -27,33 +28,33 @@ const contactOptions = [
   },
   {
     title: "Agendar showroom",
-    text: "Para revisar materiales, escala, acabados y posibilidades de producción.",
+    text: "Para revisar materiales, escala, acabados y posibilidades de produccion.",
     href: whatsappHref,
     label: "Solicitar visita",
     icon: CalendarDays,
   },
   {
     title: "Colaboraciones",
-    text: "Para interioristas, arquitectos, marcas, galerías y proyectos especiales.",
+    text: "Para interioristas, arquitectos, marcas, galerias y proyectos especiales.",
     href: `mailto:${email}?subject=Colaboracion%20con%20Nuuk%20Estudio`,
     label: "Enviar correo",
     icon: PencilLine,
   },
 ];
 
-// Opciones visibles del formulario. Si se conecta a un backend, estos valores
-// deben mantenerse alineados con el esquema esperado por correo, CRM o API.
+// Opciones visibles del formulario. Si se conecta a un backend externo, estos
+// valores deben mantenerse alineados con el esquema esperado por correo, CRM o API.
 const projectTypes = [
   "Mobiliario a medida",
-  "Remodelación artística",
-  "Instalación",
+  "Remodelacion artistica",
+  "Instalacion",
   "Azulejos",
   "Pintura",
-  "Colaboración",
+  "Colaboracion",
 ];
 
-// Pagina de contacto orientada a conversion directa por WhatsApp/correo.
-// El formulario es visual y queda listo para integrarse a un servicio real.
+// Pagina de contacto orientada a conversion directa y captura estructurada.
+// El formulario ya guarda solicitudes mediante el CRUD interno de contacto.
 export default function ContactoPage() {
   return (
     <main className="bg-paper">
@@ -68,9 +69,9 @@ export default function ContactoPage() {
             </h1>
           </div>
           <p className="max-w-[560px] text-base leading-8 text-black/62">
-            Cuéntanos qué tienes en mente: una pieza existente, una comisión a
-            medida, una remodelación o una colaboración. Respondemos desde
-            Mérida, Yucatán.
+            Cuentanos que tienes en mente: una pieza existente, una comision a
+            medida, una remodelacion o una colaboracion. Respondemos desde
+            Merida, Yucatan.
           </p>
         </div>
       </section>
@@ -114,7 +115,7 @@ export default function ContactoPage() {
               Proyecto
             </p>
             <h2 className="mt-4 max-w-[620px] text-4xl font-light leading-tight tracking-[0.02em] text-black md:text-6xl">
-              Una primera nota para entender intención, escala y atmósfera.
+              Una primera nota para entender intencion, escala y atmosfera.
             </h2>
 
             <div className="mt-12 grid gap-5 border-t border-black/12 pt-8">
@@ -150,7 +151,7 @@ export default function ContactoPage() {
               </Link>
               <p className="flex items-center gap-3 text-sm text-black/64">
                 <MapPin size={17} strokeWidth={1.5} />
-                Mérida, Yucatán, México
+                Merida, Yucatan, Mexico
               </p>
               <Link
                 href="https://instagram.com"
@@ -164,77 +165,7 @@ export default function ContactoPage() {
             </div>
           </div>
 
-          <form className="grid gap-5 bg-paper p-5 md:p-7">
-            <div className="grid gap-5 md:grid-cols-2">
-              <label className="grid gap-2">
-                <span className="text-xs uppercase tracking-[0.2em] text-black/42">
-                  Nombre
-                </span>
-                <input
-                  type="text"
-                  name="name"
-                  className="h-12 border border-black/12 bg-paper px-4 text-sm outline-none transition-colors focus:border-black"
-                />
-              </label>
-              <label className="grid gap-2">
-                <span className="text-xs uppercase tracking-[0.2em] text-black/42">
-                  Correo
-                </span>
-                <input
-                  type="email"
-                  name="email"
-                  className="h-12 border border-black/12 bg-paper px-4 text-sm outline-none transition-colors focus:border-black"
-                />
-              </label>
-            </div>
-
-            <label className="grid gap-2">
-              <span className="text-xs uppercase tracking-[0.2em] text-black/42">
-                Tipo de proyecto
-              </span>
-              <select
-                name="projectType"
-                className="h-12 border border-black/12 bg-paper px-4 text-sm text-black/70 outline-none transition-colors focus:border-black"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Selecciona una opción
-                </option>
-                {projectTypes.map((type) => (
-                  <option key={type} value={type}>
-                    {type}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label className="grid gap-2">
-              <span className="text-xs uppercase tracking-[0.2em] text-black/42">
-                Mensaje
-              </span>
-              <textarea
-                name="message"
-                rows={7}
-                className="resize-none border border-black/12 bg-paper p-4 text-sm leading-7 outline-none transition-colors focus:border-black"
-              />
-            </label>
-
-            <div className="flex flex-col gap-4 border-t border-black/10 pt-5 md:flex-row md:items-center md:justify-between">
-              <p className="max-w-[420px] text-xs leading-6 text-black/45">
-                Este formulario queda listo para conectar a correo o CRM. Por
-                ahora, usa WhatsApp o correo para enviar solicitudes reales.
-              </p>
-              <Link
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2 border border-black bg-black px-5 text-xs font-medium uppercase tracking-[0.18em] !text-white transition-colors hover:bg-white hover:!text-black"
-              >
-                Enviar por WhatsApp
-                <ArrowUpRight size={15} strokeWidth={1.5} />
-              </Link>
-            </div>
-          </form>
+          <ContactForm projectTypes={projectTypes} />
         </div>
       </section>
     </main>
